@@ -1,15 +1,15 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
+  "name": "jquery.paddles",
+  "version": "1.0.0",
+  "description": "A jQuery Pong clone that renders to an HTML5 canvas.",
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "ejs": "^2.7.4",
-    "express": "^4.17.1"
+    "express": "^5.1.0"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": ">=18"
   }
 }

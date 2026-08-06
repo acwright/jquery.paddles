@@ -1,19 +1,27 @@
 /* Fonts */
 @font-face {
   font-family: 'brandishregular';
-  src: url('/fonts/brandishregular-webfont.eot');
-  src: url('/fonts/brandishregular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/brandishregular-webfont.woff') format('woff'),
-       url('/fonts/brandishregular-webfont.ttf') format('truetype'),
-       url('/fonts/brandishregular-webfont.svg#brandishregular') format('svg');
+  src: url('../fonts/brandishregular-webfont.eot');
+  src: url('../fonts/brandishregular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/brandishregular-webfont.woff') format('woff'),
+       url('../fonts/brandishregular-webfont.ttf') format('truetype'),
+       url('../fonts/brandishregular-webfont.svg#brandishregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 /* Styles */
 body {
+  margin: 0px;
   background-color: black;
   color: white;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0px auto;
+  padding: 0px 15px;
 }
 
 h1 {
