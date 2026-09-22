@@ -14,6 +14,7 @@
       'alpha' : 1.0,
       'winning_score' : 11,
       'fps' : 60,
+      'font' : null
     };
 
     var options = $.extend({}, defaults, options);
@@ -475,7 +476,7 @@
         PADDLES.setStroke(PADDLES.options.text_color);
         PADDLES.setFill(PADDLES.options.text_color);
         
-        PADDLES.canvas.context.font = "64px BrandishRegular, Arial, sans-serif";
+        PADDLES.canvas.context.font = PADDLES.options.font;
         var title = {
           'text' : 'PADDLES',
           'origin' : {
@@ -493,7 +494,7 @@
         title.origin.y = PADDLES.canvas.size.height / 2 - title.size.height * 0.5;
         PADDLES.canvas.context.fillText(title.text, title.origin.x, title.origin.y);
         
-        PADDLES.canvas.context.font = "20px BrandishRegular, Arial, sans-serif";
+        PADDLES.canvas.context.font = PADDLES.options.font;
         var play = {
           'text' : 'Play',
           'origin' : {
@@ -583,7 +584,7 @@
         /* Draw Score */
         PADDLES.setStroke(PADDLES.options.text_color);
         PADDLES.setFill(PADDLES.options.text_color);
-        PADDLES.canvas.context.font = "28px BrandishRegular, Arial, sans-serif";
+        PADDLES.canvas.context.font = PADDLES.options.font;
         var computer = {
           'text' : PADDLES.score.computer,
           'origin' : {
@@ -636,7 +637,7 @@
         if(PADDLES.debug){
           PADDLES.setStroke('red');
           PADDLES.setFill('red');
-          PADDLES.canvas.context.font = "22px BrandishRegular, Arial, sans-serif";
+          PADDLES.canvas.context.font = PADDLES.options.font;
           var debug = {
             'text' : Math.floor(PADDLES.fps_actual) + ' fps',
             'origin' : {
@@ -664,7 +665,7 @@
         PADDLES.setStroke(PADDLES.options.text_color);
         PADDLES.setFill(PADDLES.options.text_color);
         
-        PADDLES.canvas.context.font = "64px BrandishRegular, Arial, sans-serif";
+        PADDLES.canvas.context.font = PADDLES.options.font;
         var title = {
           'text' : 'INSTRUCTIONS',
           'origin' : {
@@ -682,7 +683,7 @@
         title.origin.y = PADDLES.canvas.size.height / 2 - title.size.height * 0.5;
         PADDLES.canvas.context.fillText(title.text, title.origin.x, title.origin.y);
         
-        PADDLES.canvas.context.font = "20px BrandishRegular, Arial, sans-serif";
+        PADDLES.canvas.context.font = PADDLES.options.font;
         var controls = {
           'text' : 'Use          or          to control the paddle',
           'origin' : {
@@ -817,7 +818,7 @@
         PADDLES.setStroke(PADDLES.options.text_color);
         PADDLES.setFill(PADDLES.options.text_color);
         
-        PADDLES.canvas.context.font = "64px BrandishRegular, Arial, sans-serif";
+        PADDLES.canvas.context.font = PADDLES.options.font;
         var game_over = {
           'text' : 'GAME OVER',
           'origin' : {
@@ -833,7 +834,7 @@
         game_over.origin.y = PADDLES.canvas.size.height / 2 - game_over.height * 0.5;
         PADDLES.canvas.context.fillText(game_over.text, game_over.origin.x, game_over.origin.y);
         
-        PADDLES.canvas.context.font = "20px BrandishRegular, Arial, sans-serif";
+        PADDLES.canvas.context.font = PADDLES.options.font;
         var result = {
           'text' : PADDLES.score.human == 11 ? 'Congratulations!! You Won!!' : 'You lost! Try again...',
           'origin' : {

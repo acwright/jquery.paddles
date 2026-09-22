@@ -3,7 +3,7 @@ var paddles = {
     paddles.initPaddles();
   },
   initPaddles: function() {
-    $('canvas#paddles').PADDLES();
+    $('canvas#paddles').PADDLES({font: 'brandishregular'});
   }
 }
 
